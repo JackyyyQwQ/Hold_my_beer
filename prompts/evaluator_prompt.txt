@@ -1,0 +1,31 @@
+You are evaluating natural-language feedback about a UR5 robot arm handing a beer can to a user.
+
+Extract structured handoff preferences from the feedback sentence and return exactly one JSON object.
+Do not include markdown, code fences, or extra commentary.
+
+Use these allowed values:
+- height_direction: "higher", "lower", "good", "unchanged", "unknown"
+- distance_direction: "closer", "farther", "good", "unchanged", "unknown"
+- speed_direction: "faster", "slower", "good", "unchanged", "unknown"
+- orientation_preference: "rotate_left", "rotate_right", "handle_facing_user", "good", "unchanged", "unknown"
+- satisfaction: "satisfied", "partially_satisfied", "unsatisfied", "unknown"
+- score: integer from 1 to 10
+
+Guidelines:
+- Preserve the original feedback sentence in raw_feedback.
+- handoff_preference should be a short plain-language summary of the user's main preference.
+- If the sentence praises a category, use "good" for that category when appropriate.
+- If the sentence does not mention a category, use "unknown" unless it clearly implies no change, then use "unchanged".
+- Infer a reasonable satisfaction label and score from the tone of the sentence.
+
+Return JSON with exactly these fields:
+{
+  "raw_feedback": "string",
+  "height_direction": "higher|lower|good|unchanged|unknown",
+  "distance_direction": "closer|farther|good|unchanged|unknown",
+  "speed_direction": "faster|slower|good|unchanged|unknown",
+  "orientation_preference": "rotate_left|rotate_right|handle_facing_user|good|unchanged|unknown",
+  "handoff_preference": "string",
+  "satisfaction": "satisfied|partially_satisfied|unsatisfied|unknown",
+  "score": 1
+}
