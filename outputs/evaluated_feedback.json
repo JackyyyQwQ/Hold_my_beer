@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "raw_feedback": "This is not comfortable yet.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "The handoff needs adjustments for comfort.",
+    "satisfaction": "unsatisfied",
+    "score": 3
+  },
+  {
+    "raw_feedback": "I prefer a smoother motion.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "smoother motion",
+    "satisfaction": "partially_satisfied",
+    "score": 6
+  },
+  {
+    "raw_feedback": "Please bring it closer to me.",
+    "height_direction": "unknown",
+    "distance_direction": "closer",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "User wants the robot to bring the item closer.",
+    "satisfaction": "partially_satisfied",
+    "score": 6
+  },
+  {
+    "raw_feedback": "The robot should ask before handing it to me.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "The robot should ask before handing over the item.",
+    "satisfaction": "partially_satisfied",
+    "score": 5
+  },
+  {
+    "raw_feedback": "The handoff feels too early.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "slower",
+    "orientation_preference": "unknown",
+    "handoff_preference": "The handoff should be slower.",
+    "satisfaction": "partially_satisfied",
+    "score": 5
+  }
+]

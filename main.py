@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import random
+import re
 import statistics
 from pathlib import Path
 
@@ -8,11 +10,25 @@ from evaluator import FeedbackEvaluator
 from llm_client import LLMClient
 from optimizer import StrategyOptimizer
 
+MAX_FEEDBACK_TO_PROCESS = 5
+RANDOM_SEED = 42
+
+
+def clean_feedback_line(line: str) -> str:
+    """Remove leading numbering like '1. ' or '2)' from a feedback line."""
+    cleaned_line = line.strip()
+    return re.sub(r"^\d+[\.\)]\s*", "", cleaned_line)
+
 
 def load_feedback_lines(feedback_path: Path) -> list[str]:
-    """Read one feedback sentence per non-empty line."""
+    """Read feedback lines and randomly sample up to five non-empty entries."""
     lines = feedback_path.read_text(encoding="utf-8").splitlines()
-    return [line.strip() for line in lines if line.strip()]
+    feedback_lines = [clean_feedback_line(line) for line in lines if line.strip()]
+    if len(feedback_lines) <= MAX_FEEDBACK_TO_PROCESS:
+        return feedback_lines
+
+    random_generator = random.Random(RANDOM_SEED)
+    return random_generator.sample(feedback_lines, MAX_FEEDBACK_TO_PROCESS)
 
 
 def save_json(output_path: Path, data: object) -> None:

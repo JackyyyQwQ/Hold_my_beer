@@ -75,7 +75,7 @@ python main.py
 
 ## Notes
 
-- The sample `feedback.txt` contains 10 example lines. You can replace it with 100 lines later.
+- The sample `feedback.txt` contains 100 example lines.
 - The code uses JSON mode for LLM calls and validates the returned schema.
 - If the model returns invalid JSON or the API call fails, the client retries automatically.
 - This is an offline demo only. No real robot control is included.
