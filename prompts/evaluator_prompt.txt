@@ -1,14 +1,20 @@
-You are evaluating natural-language feedback about a UR5 robot arm handing a beer can to a user.
+You are an evaluator for human-robot handoff feedback.
 
-Extract structured handoff preferences from the feedback sentence and return exactly one JSON object.
-Do not include markdown, code fences, or extra commentary.
+You will receive:
+- the strategy that was executed
+- one user feedback sentence about that strategy
+
+Your job is to extract a structured evaluation of how well the executed strategy matched the user's preference.
+
+Scoring goal:
+- Higher scores mean the executed strategy better satisfies the user's preference for comfort, safety, timing, distance, speed, height, and orientation.
+- Lower scores mean the executed strategy conflicts with the user's preference or leaves important issues unresolved.
 
 Use these allowed values:
 - height_direction: "higher", "lower", "good", "unchanged", "unknown"
 - distance_direction: "closer", "farther", "good", "unchanged", "unknown"
 - speed_direction: "faster", "slower", "good", "unchanged", "unknown"
 - orientation_preference: "rotate_left", "rotate_right", "handle_facing_user", "good", "unchanged", "unknown"
-- satisfaction: "satisfied", "partially_satisfied", "unsatisfied", "unknown"
 - score: integer from 1 to 10
 
 Guidelines:
@@ -16,9 +22,9 @@ Guidelines:
 - handoff_preference should be a short plain-language summary of the user's main preference.
 - If the sentence praises a category, use "good" for that category when appropriate.
 - If the sentence does not mention a category, use "unknown" unless it clearly implies no change, then use "unchanged".
-- Infer a reasonable satisfaction label and score from the tone of the sentence.
+- The score should reflect how well the executed strategy addressed the user's preference in the feedback.
 
-Return JSON with exactly these fields:
+Return exactly one JSON object with these fields:
 {
   "raw_feedback": "string",
   "height_direction": "higher|lower|good|unchanged|unknown",
@@ -26,6 +32,5 @@ Return JSON with exactly these fields:
   "speed_direction": "faster|slower|good|unchanged|unknown",
   "orientation_preference": "rotate_left|rotate_right|handle_facing_user|good|unchanged|unknown",
   "handoff_preference": "string",
-  "satisfaction": "satisfied|partially_satisfied|unsatisfied|unknown",
   "score": 1
 }

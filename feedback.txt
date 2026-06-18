@@ -1,199 +1,30 @@
-1. It is a little too high for me.
-
-2. Can you lower it a bit?
-
-3. The drink is too far away.
-
-4. Please bring it closer to me.
-
-5. That is too close to my face.
-
-6. Move it slightly farther away.
-
-7. The angle feels uncomfortable.
-
-8. Can you rotate the cup toward me?
-
-9. Tilt it a little more toward my mouth.
-
-10. The cup is tilted too much.
-
-11. Please keep it more upright.
-
-12. The robot is moving too fast.
-
-13. Can you approach more slowly?
-
-14. The movement feels a bit sudden.
-
-15. I prefer a smoother motion.
-
-16. This speed feels comfortable.
-
-17. The position is good now.
-
-18. This distance feels right.
-
-19. I like this height.
-
-20. The cup is easy to reach now.
-
-21. Hold it a little higher.
-
-22. Hold it closer to my right hand.
-
-23. Move it more toward my left side.
-
-24. The robot arm is blocking my view.
-
-25. Please move the object slightly to the side.
-
-26. I cannot reach it comfortably.
-
-27. This position makes my arm stretch too much.
-
-28. Bring it closer to my body.
-
-29. Move it away from my chest.
-
-30. The cup should be closer to my shoulder level.
-
-31. I would rather have the robot hold it for me.
-
-32. Please do not hand it off yet.
-
-33. You can pass it to me now.
-
-34. Hold it steady for a few more seconds.
-
-35. I need more time before taking it.
-
-36. The handoff feels too early.
-
-37. The handoff feels natural.
-
-38. The robot should wait until I say ready.
-
-39. Please release it more slowly.
-
-40. Do not let go so quickly.
-
-41. The cup feels unstable.
-
-42. It looks like the drink might spill.
-
-43. Please reduce the tilt.
-
-44. The drink should be more level.
-
-45. Keep the cup steady.
-
-46. The motion makes the liquid shake.
-
-47. Move more carefully.
-
-48. The current pose feels safe.
-
-49. This feels stable enough.
-
-50. I am comfortable with this position.
-
-51. The robot is too close to me.
-
-52. I feel nervous when the arm comes that close.
-
-53. Please keep more distance from my face.
-
-54. The arm should stay lower.
-
-55. Avoid moving near my head.
-
-56. The robot should approach from the side.
-
-57. I prefer the robot to come from the front.
-
-58. I prefer the robot to stay on my right side.
-
-59. I prefer the robot to stay on my left side.
-
-60. This approach direction feels better.
-
-61. The cup opening should face me.
-
-62. Rotate the cup clockwise a little.
-
-63. Rotate it counterclockwise slightly.
-
-64. The handle should face my hand.
-
-65. I want the straw closer to my mouth.
-
-66. The straw is pointing the wrong way.
-
-67. The phone screen should face me.
-
-68. The object is upside down for me.
-
-69. The tool handle should point toward my hand.
-
-70. This orientation is correct.
-
-71. I like slower movements.
-
-72. I do not mind if the robot moves a little faster.
-
-73. The robot can speed up now.
-
-74. Please pause before moving closer.
-
-75. Stop here for a moment.
-
-76. Keep holding it in this position.
-
-77. Move just a tiny bit closer.
-
-78. Move only a small amount down.
-
-79. That adjustment was too much.
-
-80. The last change was better.
-
-81. I am satisfied with this pose.
-
-82. This is not comfortable yet.
-
-83. This is better than before.
-
-84. The previous position was better.
-
-85. Go back to the last pose.
-
-86. Try something between this and the last one.
-
-87. I want it closer but not higher.
-
-88. I want it lower but still close.
-
-89. The distance is fine, but the angle is wrong.
-
-90. The height is fine, but it is too far away.
-
-91. It feels more natural now.
-
-92. This feels awkward.
-
-93. I would prefer a more cautious motion.
-
-94. I trust the robot more when it moves slowly.
-
-95. The robot should ask before handing it to me.
-
-96. I want the robot to keep holding it until I grab it.
-
-97. The robot should not move while I am reaching.
-
-98. Please wait until my hand is ready.
-
-99. This strategy works well for me.
-
-100. Save this as my preferred position.
+1. The drink is a little too high for me right now.
+2. Can you lower it slightly?
+3. It is still a bit too high, but better than before.
+4. The height is closer to what I want now.
+5. The drink is also a little too far away.
+6. Please bring it closer to my body.
+7. That is better, but maybe just a tiny bit closer.
+8. This distance feels much more comfortable.
+9. The robot is moving a little too fast when approaching me.
+10. Can you slow down the approach?
+11. The slower motion feels safer.
+12. I still feel slightly nervous when the arm comes close.
+13. Please keep the arm a little farther from my face.
+14. This approach path feels safer than before.
+15. The cup opening is not facing me enough.
+16. Can you rotate the cup slightly toward me?
+17. That angle is better, but it could tilt a little more.
+18. The orientation feels correct now.
+19. The drink shakes a little during the motion.
+20. Please keep the cup more stable while moving.
+21. The motion is smoother now.
+22. I prefer the robot to hold the drink instead of handing it off immediately.
+23. Please wait until I say I am ready before releasing it.
+24. The waiting behavior feels natural.
+25. The current height and distance are both comfortable.
+26. The speed is good now, not too fast.
+27. The cup angle works well for me.
+28. This is the best position so far.
+29. I am comfortable with this strategy.
+30. Please save this as my preferred drink-holding position.

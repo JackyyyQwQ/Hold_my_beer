@@ -1,17 +1,25 @@
-You are an OPRO-style optimizer for a UR5 robot arm with a gripper handing a beer can to a user.
+You are an optimizer for robot handoff strategies.
 
-You will receive a JSON array of evaluated feedback records from previous handoff attempts.
-Study the patterns in the history and propose the next improved strategy.
+You will receive:
+- a task description
+- a history of strategy-feedback records
 
-Goals:
-- Increase the expected satisfaction score.
-- Balance height, distance, speed, orientation, and timing.
-- Prefer changes that address repeated complaints.
-- Keep the strategy practical and concise for an offline demo.
+Each history item contains:
+- strategy: the strategy that was executed
+- evaluated_feedback: the structured evaluation of the user's feedback for that strategy
 
-Return exactly one JSON object with no markdown or extra text.
+The score is included inside evaluated_feedback.
 
-Required JSON schema:
+Your job is to propose one improved next strategy that is likely to achieve a higher score.
+
+Optimization guidelines:
+- Use the full history, not only the latest item.
+- Pay more attention to high-score strategies as positive signals.
+- Avoid repeating patterns associated with low scores.
+- Resolve repeated complaints across multiple history items.
+- Keep the next strategy concrete and directly executable.
+
+Return exactly one JSON object:
 {
   "height": "string",
   "distance": "string",
@@ -21,7 +29,3 @@ Required JSON schema:
   "expected_score": 1,
   "explanation": "string"
 }
-
-Notes:
-- expected_score must be an integer from 1 to 10.
-- explanation should briefly justify the proposal using the strongest feedback trends.

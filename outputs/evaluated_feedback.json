@@ -1,52 +1,272 @@
 [
   {
-    "raw_feedback": "This is not comfortable yet.",
-    "height_direction": "unknown",
-    "distance_direction": "unknown",
-    "speed_direction": "unknown",
-    "orientation_preference": "unknown",
-    "handoff_preference": "The handoff needs adjustments for comfort.",
-    "satisfaction": "unsatisfied",
-    "score": 3
-  },
-  {
-    "raw_feedback": "I prefer a smoother motion.",
-    "height_direction": "unknown",
-    "distance_direction": "unknown",
-    "speed_direction": "unknown",
-    "orientation_preference": "unknown",
-    "handoff_preference": "smoother motion",
-    "satisfaction": "partially_satisfied",
+    "raw_feedback": "The drink is a little too high for me right now.",
+    "height_direction": "lower",
+    "distance_direction": "good",
+    "speed_direction": "good",
+    "orientation_preference": "good",
+    "handoff_preference": "lower the height of the handoff",
     "score": 6
   },
   {
-    "raw_feedback": "Please bring it closer to me.",
+    "raw_feedback": "Can you lower it slightly?",
+    "height_direction": "lower",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "lower height",
+    "score": 6
+  },
+  {
+    "raw_feedback": "It is still a bit too high, but better than before.",
+    "height_direction": "lower",
+    "distance_direction": "unchanged",
+    "speed_direction": "unchanged",
+    "orientation_preference": "unchanged",
+    "handoff_preference": "lower the handoff height",
+    "score": 6
+  },
+  {
+    "raw_feedback": "The height is closer to what I want now.",
+    "height_direction": "good",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "height closer to user's preference",
+    "score": 8
+  },
+  {
+    "raw_feedback": "The drink is also a little too far away.",
+    "height_direction": "unknown",
+    "distance_direction": "farther",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "closer handoff",
+    "score": 4
+  },
+  {
+    "raw_feedback": "Please bring it closer to my body.",
     "height_direction": "unknown",
     "distance_direction": "closer",
     "speed_direction": "unknown",
     "orientation_preference": "unknown",
-    "handoff_preference": "User wants the robot to bring the item closer.",
-    "satisfaction": "partially_satisfied",
-    "score": 6
-  },
-  {
-    "raw_feedback": "The robot should ask before handing it to me.",
-    "height_direction": "unknown",
-    "distance_direction": "unknown",
-    "speed_direction": "unknown",
-    "orientation_preference": "unknown",
-    "handoff_preference": "The robot should ask before handing over the item.",
-    "satisfaction": "partially_satisfied",
+    "handoff_preference": "User prefers the object to be closer during handoff.",
     "score": 5
   },
   {
-    "raw_feedback": "The handoff feels too early.",
+    "raw_feedback": "That is better, but maybe just a tiny bit closer.",
+    "height_direction": "unknown",
+    "distance_direction": "closer",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "closer handoff",
+    "score": 8
+  },
+  {
+    "raw_feedback": "This distance feels much more comfortable.",
+    "height_direction": "unknown",
+    "distance_direction": "good",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "comfortable distance",
+    "score": 9
+  },
+  {
+    "raw_feedback": "The robot is moving a little too fast when approaching me.",
     "height_direction": "unknown",
     "distance_direction": "unknown",
     "speed_direction": "slower",
     "orientation_preference": "unknown",
-    "handoff_preference": "The handoff should be slower.",
-    "satisfaction": "partially_satisfied",
+    "handoff_preference": "slower approach speed",
     "score": 5
+  },
+  {
+    "raw_feedback": "Can you slow down the approach?",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "slower",
+    "orientation_preference": "unknown",
+    "handoff_preference": "slower approach speed",
+    "score": 5
+  },
+  {
+    "raw_feedback": "The slower motion feels safer.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "good",
+    "orientation_preference": "unknown",
+    "handoff_preference": "slower motion for safety",
+    "score": 9
+  },
+  {
+    "raw_feedback": "I still feel slightly nervous when the arm comes close.",
+    "height_direction": "unknown",
+    "distance_direction": "closer",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "The user prefers the arm to not come too close.",
+    "score": 5
+  },
+  {
+    "raw_feedback": "Please keep the arm a little farther from my face.",
+    "height_direction": "unknown",
+    "distance_direction": "farther",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "keep the arm farther from the user's face",
+    "score": 4
+  },
+  {
+    "raw_feedback": "This approach path feels safer than before.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "good",
+    "orientation_preference": "unknown",
+    "handoff_preference": "safer approach path",
+    "score": 9
+  },
+  {
+    "raw_feedback": "The cup opening is not facing me enough.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "handle_facing_user",
+    "handoff_preference": "The user prefers the cup opening to face them more.",
+    "score": 4
+  },
+  {
+    "raw_feedback": "Can you rotate the cup slightly toward me?",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "rotate_left",
+    "handoff_preference": "rotate the cup slightly toward the user",
+    "score": 5
+  },
+  {
+    "raw_feedback": "That angle is better, but it could tilt a little more.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "rotate_right",
+    "handoff_preference": "prefers a slightly more rotated orientation",
+    "score": 7
+  },
+  {
+    "raw_feedback": "The orientation feels correct now.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "good",
+    "handoff_preference": "correct orientation",
+    "score": 9
+  },
+  {
+    "raw_feedback": "The drink shakes a little during the motion.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "reduce shaking during motion",
+    "score": 5
+  },
+  {
+    "raw_feedback": "Please keep the cup more stable while moving.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "more stability during movement",
+    "score": 5
+  },
+  {
+    "raw_feedback": "The motion is smoother now.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "good",
+    "orientation_preference": "unknown",
+    "handoff_preference": "smooth motion",
+    "score": 8
+  },
+  {
+    "raw_feedback": "I prefer the robot to hold the drink instead of handing it off immediately.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "delayed handoff",
+    "score": 3
+  },
+  {
+    "raw_feedback": "Please wait until I say I am ready before releasing it.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "User prefers to control the timing of the release.",
+    "score": 4
+  },
+  {
+    "raw_feedback": "The waiting behavior feels natural.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "natural waiting behavior",
+    "score": 8
+  },
+  {
+    "raw_feedback": "The current height and distance are both comfortable.",
+    "height_direction": "good",
+    "distance_direction": "good",
+    "speed_direction": "unknown",
+    "orientation_preference": "unknown",
+    "handoff_preference": "comfortable height and distance",
+    "score": 9
+  },
+  {
+    "raw_feedback": "The speed is good now, not too fast.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "good",
+    "orientation_preference": "unknown",
+    "handoff_preference": "The user prefers a slower speed.",
+    "score": 8
+  },
+  {
+    "raw_feedback": "The cup angle works well for me.",
+    "height_direction": "unknown",
+    "distance_direction": "unknown",
+    "speed_direction": "unknown",
+    "orientation_preference": "good",
+    "handoff_preference": "The user prefers the cup angle as executed.",
+    "score": 9
+  },
+  {
+    "raw_feedback": "This is the best position so far.",
+    "height_direction": "good",
+    "distance_direction": "good",
+    "speed_direction": "good",
+    "orientation_preference": "good",
+    "handoff_preference": "optimal positioning",
+    "score": 10
+  },
+  {
+    "raw_feedback": "I am comfortable with this strategy.",
+    "height_direction": "good",
+    "distance_direction": "good",
+    "speed_direction": "good",
+    "orientation_preference": "good",
+    "handoff_preference": "comfortable handoff",
+    "score": 10
+  },
+  {
+    "raw_feedback": "Please save this as my preferred drink-holding position.",
+    "height_direction": "good",
+    "distance_direction": "good",
+    "speed_direction": "good",
+    "orientation_preference": "good",
+    "handoff_preference": "User prefers this drink-holding position.",
+    "score": 10
   }
 ]

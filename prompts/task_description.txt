@@ -1,0 +1,10 @@
+Optimize a robot-to-human beer-can handoff strategy to maximize user comfort, safety, clarity, and overall handoff quality.
+
+The strategy should specify:
+- handoff height
+- handoff distance
+- approach speed
+- can orientation
+- handoff timing or release condition
+
+Use the full history of previous strategies and their evaluated feedback to propose a better next strategy.

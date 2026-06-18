@@ -14,7 +14,6 @@ OrientationPreference = Literal[
     "unchanged",
     "unknown",
 ]
-Satisfaction = Literal["satisfied", "partially_satisfied", "unsatisfied", "unknown"]
 
 
 class EvaluatedFeedback(TypedDict):
@@ -24,8 +23,20 @@ class EvaluatedFeedback(TypedDict):
     speed_direction: SpeedDirection
     orientation_preference: OrientationPreference
     handoff_preference: str
-    satisfaction: Satisfaction
     score: int
+
+
+class Strategy(TypedDict):
+    height: str
+    distance: str
+    speed: str
+    orientation: str
+    handoff_timing: str
+
+
+class StrategyScorePair(TypedDict):
+    strategy: Strategy
+    evaluated_feedback: EvaluatedFeedback
 
 
 class NextStrategy(TypedDict):
@@ -53,7 +64,6 @@ ALLOWED_ORIENTATION = {
     "unchanged",
     "unknown",
 }
-ALLOWED_SATISFACTION = {"satisfied", "partially_satisfied", "unsatisfied", "unknown"}
 
 
 def _require_string(data: dict[str, Any], key: str) -> str:
@@ -78,6 +88,12 @@ def _require_score(value: Any, field_name: str) -> int:
     return value
 
 
+def _require_object(value: Any, field_name: str) -> dict[str, Any]:
+    if not isinstance(value, dict):
+        raise ValidationError(f"Field '{field_name}' must be a JSON object.")
+    return value
+
+
 def validate_evaluated_feedback(data: dict[str, Any]) -> EvaluatedFeedback:
     """Validate a single evaluator response from the LLM."""
     if not isinstance(data, dict):
@@ -96,7 +112,6 @@ def validate_evaluated_feedback(data: dict[str, Any]) -> EvaluatedFeedback:
                 ALLOWED_ORIENTATION,
             ),
             "handoff_preference": _require_string(data, "handoff_preference"),
-            "satisfaction": _require_enum(data, "satisfaction", ALLOWED_SATISFACTION),
             "score": _require_score(data.get("score"), "score"),
         },
     )
@@ -107,6 +122,43 @@ def validate_evaluated_feedback_list(items: Any) -> list[EvaluatedFeedback]:
     if not isinstance(items, list):
         raise ValidationError("Evaluated feedback history must be a list.")
     return [validate_evaluated_feedback(item) for item in items]
+
+
+def validate_strategy(data: dict[str, Any]) -> Strategy:
+    """Validate one strategy payload used inside a strategy-score pair."""
+    return cast(
+        Strategy,
+        {
+            "height": _require_string(data, "height"),
+            "distance": _require_string(data, "distance"),
+            "speed": _require_string(data, "speed"),
+            "orientation": _require_string(data, "orientation"),
+            "handoff_timing": _require_string(data, "handoff_timing"),
+        },
+    )
+
+
+def validate_strategy_score_pair(data: dict[str, Any]) -> StrategyScorePair:
+    """Validate one strategy-score pair before optimization."""
+    if not isinstance(data, dict):
+        raise ValidationError("Each strategy-score pair must be a JSON object.")
+
+    return cast(
+        StrategyScorePair,
+        {
+            "strategy": validate_strategy(_require_object(data.get("strategy"), "strategy")),
+            "evaluated_feedback": validate_evaluated_feedback(
+                _require_object(data.get("evaluated_feedback"), "evaluated_feedback")
+            ),
+        },
+    )
+
+
+def validate_strategy_score_pair_list(items: Any) -> list[StrategyScorePair]:
+    """Validate the full strategy-score history before optimization."""
+    if not isinstance(items, list):
+        raise ValidationError("Strategy-score history must be a list.")
+    return [validate_strategy_score_pair(item) for item in items]
 
 
 def validate_next_strategy(data: dict[str, Any]) -> NextStrategy:
